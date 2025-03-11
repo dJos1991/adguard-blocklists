@@ -13,17 +13,24 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v2
 
+    - name: print current working directory
+      run: pwd
+
     - name: List files in the repo DEBUG
       run: ls -l script/
 
+    - name: set script path
+      id: script_path
+      run: echo "::set-output name=path::$pwd/script/ut1_blocklists_adguard.sh'
+
     - name: Grant execute permissions for the bash script
-      run: chmod +x  /script/ut1_blocklists_adguard.sh
+      run: chmod +x  ${{ steps.script_path.outputs.path }}
 
     - name: List files after chmod DEBBUG
       run: ls -l script/
 
     - name: Run script to update blocklist
-      run: bash script/ut1_blocklists_adguard.sh
+      run: bash ${{ steps.script_path.outputs.path }}
 
     - name: Commit and push changes
       run: |
