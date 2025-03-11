@@ -1,0 +1,27 @@
+name: Update blocklist
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Voer dit dagelijks uit om middernacht
+  workflow_dispatch:
+
+jobs:
+  update-blocklist:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Run script to update blocklist
+      run: script/ut1_blocklists_adguard.sh
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'Sam Geyskens'
+        git config --global user.email 'sam@geyskens.eu'
+        git add .
+        git commit -m 'Update blocklist'
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
