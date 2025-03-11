@@ -17,7 +17,7 @@ jobs:
       run: chmod +x  /script/ut1_blocklists_adguard.sh
 
     - name: Run script to update blocklist
-      run: bash script/ut1_blocklists_adguard.sh
+      run: sh script/ut1_blocklists_adguard.sh
 
     - name: Commit and push changes
       run: |
