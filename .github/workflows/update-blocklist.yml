@@ -19,18 +19,14 @@ jobs:
     - name: List files in the repo DEBUG
       run: ls -l script/
 
-    - name: set script path
-      id: script_path
-      run: echo "::set-output name=path::$pwd/script/ut1_blocklists_adguard.sh"
-
     - name: Grant execute permissions for the bash script
-      run: chmod +x  ${{ steps.script_path.outputs.path }}
+      run: chmod +x ./script/ut1_blocklists_adguard.sh
 
     - name: List files after chmod DEBBUG
       run: ls -l script/
 
     - name: Run script to update blocklist
-      run: bash ${{ steps.script_path.outputs.path }}
+      run: bash ./script/ut1_blocklists_adguard.sh
 
     - name: Commit and push changes
       run: |
