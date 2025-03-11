@@ -70,5 +70,6 @@ for UT1_BLOCKLIST_URL in ${UT1_BLOCKLIST_URLS[@]}; do
 
   # Add regex for Adguard
   sed -i 's/^/||/; s|$|\^|' $BLOCKLIST_FILE
+done
 
 
