@@ -28,6 +28,9 @@ jobs:
     - name: change working dir
       run: cd ./blocklists-adguard
 
+    - name: list files
+      run: ls -l
+
     - name: Track large files with Git LFS
       run: |
         git lfs track "*.txt"
