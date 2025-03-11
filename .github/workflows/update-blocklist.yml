@@ -25,23 +25,17 @@ jobs:
     - name: Run script to update blocklist
       run: bash ./script/ut1_blocklists_adguard.sh
 
-    - name: change working dir
-      run: cd ./blocklists-adguard
-
-    - name: list files
-      run: ls -l
-
     - name: Track large files with Git LFS
       run: |
         git lfs track "*.txt"
-        git add .gitattributes
-        git add adult.txt
+        git add ./blocklists-adguard/.gitattributes
+        git add ./blocklists-adguard/adult.txt
 
     - name: Commit and push changes
       run: |
         git config --global user.name 'Sam Geyskens'
         git config --global user.email 'sam@geyskens.eu'
-        git add .
+        git add ./blocklists-adguard
         git commit -m 'Update blocklist'
         git push
       env:
