@@ -21,7 +21,7 @@ jobs:
 
     - name: set script path
       id: script_path
-      run: echo "::set-output name=path::$pwd/script/ut1_blocklists_adguard.sh'
+      run: echo "::set-output name=path::$pwd/script/ut1_blocklists_adguard.sh"
 
     - name: Grant execute permissions for the bash script
       run: chmod +x  ${{ steps.script_path.outputs.path }}
