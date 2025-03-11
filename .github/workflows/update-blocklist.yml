@@ -13,11 +13,17 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v2
 
+    - name: List files in the repo DEBUG
+      run: ls -l script/
+
     - name: Grant execute permissions for the bash script
       run: chmod +x  /script/ut1_blocklists_adguard.sh
 
+    - name: List files after chmod DEBBUG
+      run: ls -l script/
+
     - name: Run script to update blocklist
-      run: sh script/ut1_blocklists_adguard.sh
+      run: bash script/ut1_blocklists_adguard.sh
 
     - name: Commit and push changes
       run: |
