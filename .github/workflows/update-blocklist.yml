@@ -25,6 +25,9 @@ jobs:
     - name: Run script to update blocklist
       run: bash ./script/ut1_blocklists_adguard.sh
 
+    - name: list files
+      run: ls -l
+
     - name: Track large files with Git LFS
       run: |
         git lfs track "*.txt"
