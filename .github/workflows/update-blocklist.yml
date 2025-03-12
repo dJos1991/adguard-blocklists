@@ -28,14 +28,13 @@ jobs:
     - name: Track large files with Git LFS
       run: |
         git lfs track "*.txt"
-        git add ./blocklists-adguard/.gitattributes
-        git add ./blocklists-adguard/adult.txt
+        git add .gitattributes
 
     - name: Commit and push changes
       run: |
         git config --global user.name 'Sam Geyskens'
         git config --global user.email 'sam@geyskens.eu'
-        git add ./blocklists-adguard
+        git add ./blocklists-adguard/*.txt
         git commit -m 'Update blocklist'
         git push
       env:
