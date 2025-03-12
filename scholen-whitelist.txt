@@ -1,0 +1,24 @@
+# Microsoft en Minecraft education
+@@||eu-mobile.events.data.microsoft.com^$important
+@@||microsoft.com^$important
+@@||windowsupdate.com^$important
+@@||login.minecrafteduservices.com^$important
+@@||client.discovery.minecraft-services.net^$important
+@@||api.minecraftservices.com^$important
+@@||pc.realms.minecraft.net^$important
+@@||files.minecraftforge.net^$important
+@@||downloads.minecrafteduservices.com^$important
+@@||classic.minecraft.net^$important
+@@||education.minecraft.net^$important
+@@||feedback.minecraft.net^$important
+@@||help.minecraft.net^$important
+@@||shop.minecraft.net^$important
+@@||www.minecraft.net^$important
+@@||minecrafteduservices.com^$important
+@@||minecraft-services.net^$important
+@@||xboxlive.com^$important
+@@||playfabapi.com^$important
+# leerplatformen
+@@||sanomalearning.containers.piwik.pro^$important
+@@||sanomalearning.piwik.pro^$important
+@@||cdn.jwplayer.com^$important
